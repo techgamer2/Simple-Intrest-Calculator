@@ -1,0 +1,18 @@
+name: Run Simple Interest Script
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Run simple-interest.sh script
+      run: |
+        chmod +x simple-interest.sh
+        ./simple-interest.sh
